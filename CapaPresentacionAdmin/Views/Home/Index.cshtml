@@ -1,0 +1,261 @@
+﻿<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+
+<script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Dashboard</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+
+    @*===============DASHBOARD- TARJETASS====================*@
+    <div class="row">
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-primary text-white mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <h6>Clientes</h6>
+                            <h6 id="totalcliente">0</h6>
+                        </div>
+                        <div class="col-sm-3">
+                            <i class="fas fa-user fa-3x"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="small text-white stretched-link" href="#">Ver mas detalles</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-warning text-white mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <h6>Entradas</h6>
+                            <h6 id="totalentrada">0</h6>
+                        </div>
+                        <div class="col-sm-3">
+                            <i class="fas fa-arrow-circle-down fa-3x"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="small text-white stretched-link" href="#">Ver mas detalles</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-success text-white mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <h6>Salidas</h6>
+                            <h6 id="totalsalida">0</h6>
+                        </div>
+                        <div class="col-sm-3">
+                            <i class="fas fa-arrow-alt-circle-up fa-3x"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="small text-white stretched-link" href="#">Ver mas detalles</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-danger text-white mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <h6> Productos</h6>
+                            <h6 id="totalproducto">0</h6>
+                        </div>
+                        <div class="col-sm-3">
+                            <i class="fas fa-box-open fa-3x"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="small text-white stretched-link" href="#">Ver mas detalles</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    @*======================GRAFICOS=======================*@
+    <div class="row">
+        <div class="col-xl-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-chart-area me-1"></i>
+                    Area de grafico No1
+                </div>
+                <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+            </div>
+        </div>
+        <div class="col-xl-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-chart-bar me-1"></i>
+                    Grafico de barras No1
+                </div>
+                <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+            </div>
+        </div>
+    </div>
+
+
+    @*======================HISTORIAL=======================*@
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-tags me-1"></i>
+            Historial de Ventas
+        </div>
+        <div class="card-body">
+
+            <form action="@Url.Action("ExportarVenta", "Home")" method="post">
+                <div class="row align-items-end">
+                    <div class="col-sm-2">
+                        <div class="mb-2">
+                            <label class="form-label">Fecha de inicio:</label>
+                            <input class="form-control" type="text" id="txtfechainicio" name="fechainicio" />
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="mb-2">
+                            <label class="form-label">Fecha fin:</label>
+                            <input class="form-control" type="text" id="txtfechafin" name="fechafin" />
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="mb-2">
+                            <label class="form-label">Transaccion:</label>
+                            <input class="form-control" type="text" id="txttransaccion" name="transaccion" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <div class="d-grid mb-2">
+                            <button class="btn btn-primary" id="btnbuscar" type="button"><i class="fas fa-search"></i>  Buscar</button>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <div class="d-grid mb-2">
+                            <button class="btn btn-success" type="submit"><i class="fas fa-file-excel"></i>  Exportar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+
+            <hr />
+            @*======================HISTORIAL \ GRAFICOS=======================*@
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <table id="tabla" class="display cell-border" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Fecha Venta</th>
+                                <th>Cliente</th>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th>Total</th>
+                                <th>ID Transaccion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>    
+    @*==============SCRTPTS================*@
+@section scripts{ @*necesario para ejeructar un script*@
+<script>
+    $(document).ready(function () {
+
+        var tabladata;
+
+        $("#txtfechainicio").datepicker({ dateFormat: 'dd/mm/yy' }).datepicker('setDate', new Date());
+        $("#txtfechafin").datepicker({ dateFormat: 'dd/mm/yy' }).datepicker('setDate', new Date())
+
+
+        jQuery.ajax({
+            url: '@Url.Action("VistaDashBoard", "Home")',
+            type:"GET",
+            dataType: "json",
+            contentType:"application/json; charset=utf-8",
+            success: function (data) {
+
+                var objeto = data.resultado;
+
+                $("#totalcliente").text(objeto.TotalCliente)
+                $("#totalventa").text(objeto.TotalVenta)
+                $("#totalproducto").text(objeto.TotalProducto)
+                //console.log(objeto)
+                }
+        });
+
+        var Url = '@Url.Action("ListaReporte","Home")' +
+        "?fechainicio="+$("#txtfechainicio").val()+
+        "&fechafin="+$("#txtfechafin").val()+
+            "&idtransaccion=" + $("#txtidtransaccion").val()
+
+
+
+        tabladata = $("#tabla").DataTable({
+            responsive: true,
+            ordering: false,
+            "ajax": {
+                url: Url,
+                type: "GET",
+                dataType:"json",
+            },
+            "columns": [
+                { "data": "FechaVenta" },
+                { "data": "Cliente" },
+                { "data": "Producto" },
+                { "data": "Precio" },
+                { "data": "Cantidad" },
+                { "data": "Total" },
+                { "data": "IdTransaccion" }
+            ],
+                "language": {
+                    "url":"https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"/*cambia el idioma */
+            }
+        });
+
+    })
+
+    $("#btnbuscar").on("click", function () {
+
+         var nueva_Url = '@Url.Action("ListaReporte","Home")' +
+        "?fechainicio="+$("#txtfechainicio").val()+
+        "&fechafin="+$("#txtfechafin").val()+
+             "&idtransaccion=" + $("#txtidtransaccion").val()
+        tabladata.ajax.url(nueva_Url).load();
+
+    })
+
+
+</script>    
+}

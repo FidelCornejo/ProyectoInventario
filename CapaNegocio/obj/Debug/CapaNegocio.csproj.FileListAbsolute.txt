@@ -1,0 +1,11 @@
+D:\Sistema\Documents\VStudio\CapaPresentacionAdmin\SistemaMVC\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+D:\Sistema\Documents\VStudio\CapaPresentacionAdmin\SistemaMVC\CapaNegocio\bin\Debug\CapaNegocio.dll
+D:\Sistema\Documents\VStudio\CapaPresentacionAdmin\SistemaMVC\CapaNegocio\bin\Debug\CapaNegocio.pdb
+D:\Sistema\Documents\VStudio\CapaPresentacionAdmin\SistemaMVC\CapaNegocio\bin\Debug\CapaDatos.dll
+D:\Sistema\Documents\VStudio\CapaPresentacionAdmin\SistemaMVC\CapaNegocio\bin\Debug\CapaEntidad.dll
+D:\Sistema\Documents\VStudio\CapaPresentacionAdmin\SistemaMVC\CapaNegocio\bin\Debug\CapaDatos.pdb
+D:\Sistema\Documents\VStudio\CapaPresentacionAdmin\SistemaMVC\CapaNegocio\bin\Debug\CapaEntidad.pdb
+D:\Sistema\Documents\VStudio\CapaPresentacionAdmin\SistemaMVC\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+D:\Sistema\Documents\VStudio\CapaPresentacionAdmin\SistemaMVC\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+D:\Sistema\Documents\VStudio\CapaPresentacionAdmin\SistemaMVC\CapaNegocio\obj\Debug\CapaNegocio.dll
+D:\Sistema\Documents\VStudio\CapaPresentacionAdmin\SistemaMVC\CapaNegocio\obj\Debug\CapaNegocio.pdb

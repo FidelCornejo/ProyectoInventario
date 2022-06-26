@@ -1,0 +1,6 @@
+D:\Sistema\Documents\VStudio\CapaPresentacionAdmin\SistemaMVC\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+D:\Sistema\Documents\VStudio\CapaPresentacionAdmin\SistemaMVC\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+D:\Sistema\Documents\VStudio\CapaPresentacionAdmin\SistemaMVC\CapaEntidad\bin\Debug\CapaEntidad.dll
+D:\Sistema\Documents\VStudio\CapaPresentacionAdmin\SistemaMVC\CapaEntidad\bin\Debug\CapaEntidad.pdb
+D:\Sistema\Documents\VStudio\CapaPresentacionAdmin\SistemaMVC\CapaEntidad\obj\Debug\CapaEntidad.dll
+D:\Sistema\Documents\VStudio\CapaPresentacionAdmin\SistemaMVC\CapaEntidad\obj\Debug\CapaEntidad.pdb
